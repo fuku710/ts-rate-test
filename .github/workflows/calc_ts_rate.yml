@@ -1,0 +1,17 @@
+name: Calc TS rate
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  calc:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - run: npm install fuku710/vue-sfc-ts-rate
+      - run: vue-sfc-ts-rate src/components/**
