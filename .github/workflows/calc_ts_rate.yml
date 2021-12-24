@@ -13,5 +13,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
-      - run: npm install fuku710/vue-sfc-ts-rate
+      - run: npm install -g fuku710/vue-sfc-ts-rate
       - run: vue-sfc-ts-rate src/components/**
